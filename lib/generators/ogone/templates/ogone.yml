@@ -1,0 +1,15 @@
+development: &test
+  pspid: 'CHANGEME'
+  sha_in: ''
+  sha_out: ''
+
+test:
+  <<: *test
+
+staging:
+  <<: *test
+
+production:
+  pspid: 'CHANGEME'
+  sha_in: ''
+  sha_out: ''
