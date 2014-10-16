@@ -1,13 +1,10 @@
-development: &test
+development: &development
   pspid: 'CHANGEME'
   sha_in: ''
   sha_out: ''
 
 test:
-  <<: *test
-
-staging:
-  <<: *test
+  <<: *development
 
 production:
   pspid: 'CHANGEME'
