@@ -2,8 +2,6 @@
 ## Description
 This gem provides the bare minimum to integrate simple Ogone payments into your Rails app. It assumes basic knowledge of how Ogone works, and how it is configured for your project.
 
-It's possible this gem will work in non-Rails apps, assuming you have the ```config/ogone.yml``` file in place that the Rails generator would normally create for you. Though, this is untested at the moment of writing. If you want to give it a go, look at [lib/rails-ogone/helper.rb](https://github.com/davelens/rails-ogone/blob/master/lib/rails-ogone/helper.rb) to get you started.
-
 ## Installation
 In your Gemfile:
 ```
@@ -85,3 +83,5 @@ This gem uses RSpec (and optionally Guard) for its tests. So in your CLI, run th
 ```bash
 $ rspec
 ```
+## What about non-Rails apps?
+It's possible this gem will work in non-Rails apps, assuming you have the ```config/ogone.yml``` file in place that the Rails generator would normally create for you. Though, this is untested at the moment of writing. If you want to give it a go, look at [lib/rails-ogone/helper.rb](https://github.com/davelens/rails-ogone/blob/master/lib/rails-ogone/helper.rb) to get you started.
