@@ -16,7 +16,8 @@ module RailsOgone
       value = (value.to_f * 100).to_i if name.downcase == 'amount'
       @form_fields[name] = value
       @hash.add_parameter name, value
-      ("<input type=\"hidden\" name=\"%s\" value=\"%s\" />" % [name.upcase, value]).html_safe
+      html_string = "<input type=\"hidden\" name=\"%s\" value=\"%s\" />" % [name.upcase, value]
+      ActiveSupport::SafeBuffer.new html_string
     end
 
     def tag(options = {})

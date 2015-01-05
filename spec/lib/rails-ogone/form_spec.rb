@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe BlimpOgone::Form do
+describe RailsOgone::Form do
   let(:instance) { described_class.new }
 
   it '#input' do

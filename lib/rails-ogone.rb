@@ -5,8 +5,10 @@ require 'rails-ogone/hash'
 module RailsOgone
   attr_reader :config
 
+  ROOT = File.expand_path((defined?(Rails) && Rails.root.to_s.length > 0) ? Rails.root : ENV['RAILS_ROOT'] || '.') unless defined?(ROOT)
+
   def self.load!
-    @config ||= YAML.load_file('config/ogone.yml')[Rails.env].symbolize_keys
+    @config ||= YAML.load_file(File.join(ROOT, 'config/ogone.yml'))[Rails.env].symbolize_keys
 
     @config.each do |k,v|
       self.class.send(:define_method, k) { v }
@@ -14,4 +16,4 @@ module RailsOgone
   end
 end
 
-RailsOgone.load!
+RailsOgone.load! unless Rails.env == 'test'

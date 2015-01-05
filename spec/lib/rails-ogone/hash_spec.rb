@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe BlimpOgone::Hash do
+describe RailsOgone::Hash do
   let(:instance) { described_class.new }
 
   it '#add_parameter' do
@@ -9,9 +9,10 @@ describe BlimpOgone::Hash do
   end
 
   it '#generate' do
+    allow(RailsOgone).to receive(:sha_in) { 'this is the sha-in' }
     instance.add_parameter 'foo', 'bar'
     instance.add_parameter 'bar', 'baz'
-    expect(instance.generate).to eq '4F4EC7F53F309DB473D36FAC9D81849D810199BB'
+    expect(instance.generate).to eq '33800C8F9902DD147EBBFD5DB86E96F3FE754173'
   end
 
   it '#raw' do

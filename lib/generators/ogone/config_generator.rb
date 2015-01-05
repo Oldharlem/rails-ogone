@@ -7,9 +7,9 @@ module Ogone
     desc 'Generates config files for rails-ogone.'
     def copy_files
       say_status 'OK', 'Copying to config/ogone.yml', :yellow
-      copy_file "ogone.yml", "config/ogone.yml"
+      copy_file 'ogone.yml', 'config/ogone.yml'
       say_status 'OK', 'Copying to config/initializers/ogone.rb', :yellow
-      copy_file "ogone.rb", "config/initializers/ogone.rb"
+      copy_file 'ogone.rb', 'config/initializers/ogone.rb'
     end
 
     def print_manual
