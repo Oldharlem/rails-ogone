@@ -38,36 +38,36 @@ Gem::Specification.new do |s|
   s.homepage = "https://github.com/davelens/rails-ogone"
   s.licenses = ["MIT"]
   s.rubygems_version = "2.2.2"
-  s.summary = "Rails gem to facilitate simple payments with Ogone."
+  s.summary = "Ogone functionality for Rails."
 
   if s.respond_to? :specification_version then
     s.specification_version = 4
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<activesupport>, ["~> 4.1.6"])
-      s.add_runtime_dependency(%q<actionview>, ["~> 4.1.6"])
+      s.add_runtime_dependency(%q<activesupport>, ["~> 4.1"])
+      s.add_runtime_dependency(%q<actionview>, ["~> 4.1"])
       s.add_development_dependency(%q<rspec>, ["~> 3.1"])
-      s.add_development_dependency(%q<rspec-mocks>, ["~> 3.1.3"])
-      s.add_development_dependency(%q<rdoc>, [">= 0"])
-      s.add_development_dependency(%q<bundler>, [">= 0"])
-      s.add_development_dependency(%q<jeweler>, [">= 0"])
+      s.add_development_dependency(%q<rspec-mocks>, ["~> 3.1"])
+      s.add_development_dependency(%q<rdoc>, ["~> 4.1"])
+      s.add_development_dependency(%q<bundler>, ["~> 1.6"])
+      s.add_development_dependency(%q<jeweler>, ["~> 2.0"])
     else
-      s.add_dependency(%q<activesupport>, ["~> 4.1.6"])
-      s.add_dependency(%q<actionview>, ["~> 4.1.6"])
+      s.add_dependency(%q<activesupport>, ["~> 4.1"])
+      s.add_dependency(%q<actionview>, ["~> 4.1"])
       s.add_dependency(%q<rspec>, ["~> 3.1"])
-      s.add_dependency(%q<rspec-mocks>, ["~> 3.1.3"])
-      s.add_dependency(%q<rdoc>, [">= 0"])
-      s.add_dependency(%q<bundler>, [">= 0"])
-      s.add_dependency(%q<jeweler>, [">= 0"])
+      s.add_dependency(%q<rspec-mocks>, ["~> 3.1"])
+      s.add_dependency(%q<rdoc>, ["~> 4.1"])
+      s.add_dependency(%q<bundler>, ["~> 1.6"])
+      s.add_dependency(%q<jeweler>, ["~> 2.0"])
     end
   else
-    s.add_dependency(%q<activesupport>, ["~> 4.1.6"])
-    s.add_dependency(%q<actionview>, ["~> 4.1.6"])
+    s.add_dependency(%q<activesupport>, ["~> 4.1"])
+    s.add_dependency(%q<actionview>, ["~> 4.1"])
     s.add_dependency(%q<rspec>, ["~> 3.1"])
-    s.add_dependency(%q<rspec-mocks>, ["~> 3.1.3"])
-    s.add_dependency(%q<rdoc>, [">= 0"])
-    s.add_dependency(%q<bundler>, [">= 0"])
-    s.add_dependency(%q<jeweler>, [">= 0"])
+    s.add_dependency(%q<rspec-mocks>, ["~> 3.1"])
+    s.add_dependency(%q<rdoc>, ["~> 4.1"])
+    s.add_dependency(%q<bundler>, ["~> 1.6"])
+    s.add_dependency(%q<jeweler>, ["~> 2.0"])
   end
 end
 
