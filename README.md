@@ -85,3 +85,6 @@ $ rspec
 ```
 ## What about non-Rails apps?
 It's possible this gem will work in non-Rails apps, assuming you have the ```config/ogone.yml``` file in place that the Rails generator would normally create for you. Though, this is untested at the moment of writing. If you want to give it a go, look at [lib/rails-ogone/helper.rb](https://github.com/davelens/rails-ogone/blob/master/lib/rails-ogone/helper.rb) to get you started.
+
+## Copyright
+Copyright (c) 2015 Dave Lens, released under the MIT license.
