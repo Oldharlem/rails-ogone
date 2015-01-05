@@ -1,12 +1,12 @@
 source "http://rubygems.org"
 
-gem 'activesupport'
-gem 'actionview'
+gem 'activesupport', '~> 4.1'
+gem 'actionview', '~> 4.1'
 
 group :development do
-  gem 'rspec'
-  gem 'rspec-mocks'
-  gem 'rdoc'
-  gem 'bundler'
-  gem 'jeweler'
+  gem 'rspec', '~> 3.1'
+  gem 'rspec-mocks', '~> 3.1'
+  gem 'rdoc', '~> 4.1'
+  gem 'bundler', '~> 1.6'
+  gem 'jeweler', '~> 2.0'
 end

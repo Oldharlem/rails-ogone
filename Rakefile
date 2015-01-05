@@ -16,7 +16,7 @@ Jeweler::Tasks.new do |gem|
   gem.name = 'rails-ogone'
   gem.homepage = 'https://github.com/davelens/rails-ogone'
   gem.license = 'MIT'
-  gem.summary = 'Rails gem to facilitate simple payments with Ogone.'
+  gem.summary = 'Ogone functionality for Rails.'
   gem.description = 'Rails gem to facilitate simple payments with Ogone.'
   gem.email = 'github@davelens.be'
   gem.authors = ['Dave Lens']

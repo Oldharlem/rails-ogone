@@ -79,10 +79,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  actionview
-  activesupport
-  bundler
-  jeweler
-  rdoc
-  rspec
-  rspec-mocks
+  actionview (~> 4.1)
+  activesupport (~> 4.1)
+  bundler (~> 1.6)
+  jeweler (~> 2.0)
+  rdoc (~> 4.1)
+  rspec (~> 3.1)
+  rspec-mocks (~> 3.1)
