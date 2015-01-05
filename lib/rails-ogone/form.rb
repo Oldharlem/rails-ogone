@@ -28,7 +28,7 @@ module RailsOgone
       end
 
       output = "<form method=\"post\"#{form_attributes}>"
-      output.html_safe
+      ActiveSupport::SafeBuffer.new output
     end
   end
 end

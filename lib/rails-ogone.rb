@@ -1,6 +1,7 @@
 require 'rails-ogone/helper'
 require 'rails-ogone/form'
 require 'rails-ogone/hash'
+require 'active_support/all'
 
 module RailsOgone
   attr_reader :config
@@ -20,4 +21,4 @@ module RailsOgone
   end
 end
 
-RailsOgone.load! unless Rails.env == 'test'
+RailsOgone.load! if defined?(Rails) && Rails.env != 'test'

@@ -1,5 +1,3 @@
-require 'rails'
-
 module RailsOgone
   module Helper
     def ogone_form_tag(options = {}, &block)
