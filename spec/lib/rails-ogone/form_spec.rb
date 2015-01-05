@@ -27,6 +27,10 @@ describe RailsOgone::Form do
     it :test do
       expect(instance.tag).to eq '<form method="post" action="https://secure.ogone.com/ncol/test/orderstandard.asp">'
     end
+
+    it :parameters do
+      expect(instance.tag(class: 'test')).to eq '<form method="post" class="test" action="https://secure.ogone.com/ncol/test/orderstandard.asp">'
+    end
   end
 
   it '#respond_to?' do
