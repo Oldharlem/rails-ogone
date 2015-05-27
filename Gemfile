@@ -1,7 +1,6 @@
 source "http://rubygems.org"
 
 gem 'activesupport', '~> 3.2.21'
-gem 'actionview', '~> 3.2.21'
 
 group :development do
   gem 'rspec', '~> 3.1'
