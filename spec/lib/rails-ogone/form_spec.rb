@@ -4,17 +4,30 @@ describe RailsOgone::Form do
   let(:instance) { described_class.new }
 
   it '#input' do
-    expect(instance.input('foo', 'bar')).to eq '<input type="hidden" name="FOO" value="bar" />'
+    expect(instance.input('hidden', 'foo', 'bar')).to eq '<input type="hidden" name="FOO" value="bar" />'
   end
 
   describe '#action_url' do
-    it :prod do
-      instance = described_class.new 'production'
-      expect(instance.action_url).to eq 'https://secure.ogone.com/ncol/prod/orderstandard.asp'
+    describe 'prod' do
+      let(:instance) { described_class.new 'production' }
+
+      it 'iso' do
+        expect(instance.action_url).to eq 'https://secure.ogone.com/ncol/prod/orderstandard.asp'
+      end
+
+      it 'utf8' do
+        expect(instance.action_url(utf8: true)).to eq 'https://secure.ogone.com/ncol/prod/orderstandard_utf8.asp'
+      end
     end
 
-    it :test do
-      expect(instance.action_url).to eq 'https://secure.ogone.com/ncol/test/orderstandard.asp'
+    describe 'test' do
+      it 'iso' do
+        expect(instance.action_url).to eq 'https://secure.ogone.com/ncol/test/orderstandard.asp'
+      end
+
+      it 'utf8' do
+        expect(instance.action_url(utf8: true)).to eq 'https://secure.ogone.com/ncol/test/orderstandard_utf8.asp'
+      end
     end
   end
 
