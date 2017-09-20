@@ -78,9 +78,9 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport
-  bundler (~> 1.15.4)
-  jeweler (~> 2.3.7)
-  rdoc (~> 5.1)
+  bundler
+  jeweler
+  rdoc
   rspec (~> 3.6)
 
 BUNDLED WITH
