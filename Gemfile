@@ -1,13 +1,10 @@
 source "http://rubygems.org"
 
-gem 'activesupport', '~> 3.2.21'
+gem 'activesupport'
 
 group :development do
-  gem 'rspec', '~> 3.1'
-  gem 'rspec-mocks', '~> 3.1'
-  gem 'guard', '~> 2.6'
-  gem 'guard-rspec', '~> 4.3'
-  gem 'rdoc', '~> 4.1'
-  gem 'bundler', '~> 1.6'
-  gem 'jeweler', '~> 2.0'
+  gem 'rspec', '~> 3.6'
+  gem 'rdoc', '~> 5.1'
+  gem 'bundler', '~> 1.15.4'
+  gem 'jeweler', '~> 2.3.7'
 end
