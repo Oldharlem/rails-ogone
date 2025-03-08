@@ -11,8 +11,13 @@ module RailsOgone
   def self.load!
     config_file = File.join(ROOT, 'config/ogone.yml')
 
-    if File.exists?(config_file)
-      @config ||= YAML.load_file(config_file)[Rails.env].symbolize_keys
+    if File.exist?(config_file)
+      yaml_content = File.read(config_file)
+      @config ||= if Gem::Version.new(RUBY_VERSION) >= Gem::Version.new('3.1.0')
+                    YAML.safe_load(yaml_content, aliases: true, symbolize_names: true)[Rails.env.to_sym]
+                  else
+                    YAML.load_file(config_file)[Rails.env].symbolize_keys
+                  end
 
       @config.each do |k,v|
         self.class.send(:define_method, k) { v }
